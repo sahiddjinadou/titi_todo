@@ -5,7 +5,7 @@
     <input
       type="text"
       class="new-todo"
-      placeholder="Entrez une tâche "
+      placeholder="Entrez une tâche"
       autofocus
       autocomplete="off"
     />
