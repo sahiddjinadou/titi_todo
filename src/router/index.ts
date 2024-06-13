@@ -5,8 +5,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: TodoView,
-    },
+      component: TodoView
+    }
   ]
 })
 
