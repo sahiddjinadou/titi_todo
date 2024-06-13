@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <span class="todo-count">
-        <strong> 10 </strong>
+        <strong> 10 tâches Restantes</strong>
     </span>
         <ul class="filters">
             <li><RouterLink to="#">Tous</RouterLink></li>
