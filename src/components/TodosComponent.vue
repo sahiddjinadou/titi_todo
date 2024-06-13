@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- hearder -->
-    <TodoHeader />
+    <TodoHeader @add-todo = "addTodo" />
     <!-- hearder -->
 
     <!-- Listes des tâches -->
@@ -13,7 +13,7 @@
       <ul class="todo-list">
         <li v-for="todo in todos" :key="todo.id">
           <div class="view">
-            <input type="checkbox" :id="todo.id" class="toggle" v-model="todo.conmpleted" />
+            <input type="checkbox" :id="todo.id" class="toggle" v-model="todo.completed" />
             <label :for="todo.id">{{ todo.label }}</label>
           </div>
         </li>
@@ -34,6 +34,7 @@
 import type { Todo } from '@/@types'
 import TodoFooter from '@/components/TodoFooter.vue'
 import TodoHeader from '@/components/TodoHeader.vue'
+import { nanoid } from 'nanoid';
 import { ref } from 'vue'
 
 const todos = ref<Todo[]>([
@@ -42,6 +43,14 @@ const todos = ref<Todo[]>([
   { id: '6255b7c4-0ffc-42ed-a757-80bec22d583e', label: ' Ma tâche 3', completed: false },
   { id: '33d57b1b-ef58-43f3-a1db-cb8f18f8e042', label: ' Ma tâche 4', completed: false }
 ])
+
+function addTodo (value:string){
+  todos.value.push({
+    id:nanoid(),
+    label:value,
+    completed:false
+  })
+}
 </script>
 
 <style scoped></style>
