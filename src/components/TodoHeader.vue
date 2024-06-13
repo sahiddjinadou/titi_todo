@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1>Todo</h1>
+    <h1>Todos</h1>
 
     <input
       type="text"
