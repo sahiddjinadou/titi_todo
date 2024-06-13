@@ -1,5 +1,5 @@
-export interface Todo {    
-    id: String  
-    label: String  
-    completed:boolean
+export interface Todo {
+  id: String
+  label: String
+  completed: boolean
 }
